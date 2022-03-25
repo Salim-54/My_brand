@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="../css/editnew.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo Paaji 2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/ui/trumbowyg.min.css" rel="stylesheet">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit new Blog</title>
+</head>
+<body class="user">
+
+    <nav class="admin">
+        <nav class="admin__nav">
+            <ul class="admin__nav-links">
+
+                <img src="/img/logo.png" alt="logo" class="admin__nav-logo">
+
+            </ul>
+
+
+            <h3 class="admin__nav-dash">DASHBOARD</h3>
+
+            <form class="admin__nav-search" action="">
+
+                <img src="../img/search.svg" alt="Search icon" class="admin__nav-search--icon">
+                
+                <input class="admin__nav-search--input" type="search" placeholder="search..." >
+            </form>
+            
+            <div class="admin__nav-profile">
+                <img class="admin__nav-profile--pic" src="/img/profile-pic.jpg" alt="my pic">
+
+                <p class="admin__nav-profile--name"> <span class="admin__nav-profile--name---first">Ndayisabye</span> <br> <span class="admin__nav-profile--name---last">Salim</span></p>
+                <!-- <div class="admin__nav-profile--name---last">Salim</div> -->
+                </figcaption>
+            </div>
+
+            <a href="" id="logout" class="admin__nav-logout">
+                Log Out
+            </a>
+
+        </nav>
+    </nav>
+
+
+    <main class="container">
+        <div class="container__side">
+            <ul class="container__side-list">
+                <li class="container__side-list--item top-link link-active"><a href="/views/blogs.html">Manage Blogs</a></li>
+                <li class="container__side-list--item"><a href="/views/queries.html">Manage Queries</a></li>
+                <li class="container__side-list--item"><a href="/views/comments.html">Manage Comments</a> </li>
+                <li class="container__side-list--item"><a href="/views/users.html">Manage Users</a> </li>
+            </ul>
+
+        </div>
+        <div class="container__content">
+            <div class="container__content-heading">
+                <h1 class="container__content-heading-head">
+                    Edit new Blog
+                </h1>
+            </div>
+            
+        <form class="editor" style="font-size: 2rem;">
+            <div style= "padding: 2rem 1rem;">
+                <div class="editor__inputs">
+                  <label for="pet-select">Categories:</label>
+                    <select style="font-size: inherit; font-family: inherit;" name="pets" id="category">
+                      <option value="code">code</option>
+                      <option value="machine">machine</option>
+                      <option value="life">life</option>
+                   </select>
+                    <input id="blog-title" class="editor__inputs-title" type="text" placeholder="Type title of blog">
+                    <input class="editor__inputs-file" type="file">
+                </div>
+                
+                <textarea  id="intro-area" class="editor__inputs-intro" type="text" placeholder="Type blog intro"></textarea>
+            </div>
+            <textarea  name="" id="body" cols="30" rows="10"></textarea> 
+            <input class="editor__inputs-submit" id="create-blog-btn" type="submit" value="Create">
+        </form>
+           
+    </main>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/trumbowyg.min.js"></script>
+<script> $('#body').trumbowyg();</script>
+<script src="/js//admin.create.blog.js"></script>
+
+</body>
+</html>

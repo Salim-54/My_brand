@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*::selection {
+  color: black;
+  background: #f4f5f5;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  font-family: "Baloo Paaji 2", sans-serif;
+}
+
+:root {
+  --landing-gradient: linear-gradient(
+    rgba(56, 70, 77, 0.78),
+    rgba(56, 70, 77, 0.78),
+    url(/img/land.jpg)
+  );
+  --contact--gradient: linear-gradient(
+    rgba(56, 70, 77, 0.94),
+    rgba(56, 70, 77, 0.94)
+  );
+  --portfolio-border-gradient: linear-gradient(
+    to top left,
+    rgba(115, 133, 203, 1),
+    rgba(139, 160, 169, 1)
+  );
+  --landing-card-one: rgba(183, 108, 80, 0.8);
+  --landing-arrow-one: rgba(254, 242, 238, 1);
+  --landing-card-two: rgba(240, 248, 255, 0.8);
+  --landing-arrow-two: rgba(206, 214, 218, 1);
+  --landing-card-three: rgba(216, 214, 177, 1);
+  --landing-arrow-three: rgba(216, 214, 177, 1);
+  --card-description: linear-gradient(
+    rgba(83, 94, 143, 1),
+    rgba(85, 92, 94, 1)
+  );
+  --over-layer: rgba(255, 255, 255, 0.39);
+  --button-first: rgba(53, 132, 46, 1);
+  --button-grey: rgba(139, 160, 169, 1);
+  --admin-bg-color: rgba(0, 0, 0, 0.2);
+  --admin-backdrop-filter: blur(10px);
+  --login-btn-login: linear-gradient(
+    rgba(40, 50, 55, 1),
+    rgba(213, 215, 216, 1)
+  );
+  --article-one: linear-gradient(
+    rgba(188, 188, 182, 1),
+    rgba(255, 255, 153, 1)
+  );
+  --article-two: linear-gradient(
+    rgba(135, 141, 159, 1),
+    rgba(215, 223, 255, 1)
+  );
+  --article-three: linear-gradient(
+    rgba(29, 185, 176, 1),
+    rgba(124, 245, 239, 1)
+  );
+  --article-four: linear-gradient(
+    rgba(205, 156, 163, 1),
+    rgba(255, 233, 236, 1)
+  );
+  --nav-bg: rgba(82, 93, 98, 1);
+  --detail-blog: rgba(136, 157, 168, 1);
+  --active-nav-link: rgba(160, 180, 255, 1);
+  --black-text: rgba(85, 92, 94, 1);
+  --white-text: #fff;
+  --light-grey-text: rgba(222, 224, 225, 1);
+}
+
+.user {
+  background-color: #344047;
+  color: #515c62;
+}
+
+.admin {
+  background-color: #515c62;
+  border-bottom: 1px solid #fff;
+}
+
+.admin__nav {
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10rem;
+}
+.admin__nav-logo {
+  width: 5rem;
+}
+
+.admin__nav-dash {
+  font-family: "Heebo", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: #fff;
+}
+
+.admin__nav-search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin__nav-search input[type="search"]::-webkit-search-decoration,
+.admin__nav-search input[type="search"]::-webkit-search-cancel-button,
+.admin__nav-search input[type="search"]::-webkit-search-results-button,
+.admin__nav-search input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.admin__nav-search--input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.404);
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 30rem;
+  width: 90%;
+  margin-left: -3.5rem;
+  transition: all 0.2s;
+  color: #fff;
+}
+
+.admin__nav-search--input:focus {
+  outline: none;
+  width: 100%;
+}
+
+.admin__nav-search--icon {
+  width: 2rem;
+  z-index: 5;
+}
+
+.admin__nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+.admin__nav-profile--pic {
+  border-radius: 50%;
+  width: 7rem;
+  margin-right: 2rem;
+  border: 0.3rem solid #fff;
+}
+
+.admin__nav-profile--name {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.admin__nav-profile--name---first {
+  font-weight: 600;
+}
+
+.admin__nav-profile--name---last {
+  letter-spacing: 1rem;
+}
+
+.admin__nav-logout {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  margin-top: 5rem;
+  align-items: flex-start;
+}
+
+.container__side {
+  background-color: #525d62;
+  min-width: 23rem;
+  margin-right: 10rem;
+  min-height: 79vh;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.container__side-list {
+  font-size: 1.6rem;
+  color: #eef5f7;
+  overflow: hidden;
+  font-family: "Baloo Paaji 2", sans-serif;
+}
+
+.container__side-list--item a {
+  color: #eef5f7;
+  /* cursor: pointer; */
+  text-decoration: none;
+}
+
+.container__side-list--item {
+  /* text-decoration: none; */
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  overflow: hidden;
+  border-bottom: 1px solid #eef5f7;
+}
+
+.container__side-list--item:hover {
+  background-color: #eef5f7;
+  color: #525d62;
+}
+
+.container__side-list--item a:hover {
+  /* background-color: #EEF5F7; */
+  color: #525d62;
+}
+
+.container__content {
+  background-color: #f4f5f5;
+  max-width: 70vw;
+  min-width: 70vw;
+  padding: 3rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5rem 5rem rgba(0, 0, 0, 0.25);
+}
+
+.container__content-heading {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0.5rem;
+  border-bottom: 1px solid #525252;
+}
+
+.container__content-heading-head {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.top-link {
+  border-top-right-radius: 1.5rem;
+}
+
+.link-active {
+  background-color: #eef5f7;
+  color: #525d62;
+  font-weight: 800;
+}
+
+.link-active a {
+  background-color: #eef5f7;
+  color: #525d62;
+  font-weight: 800;
+}
+
+.editor__inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 3rem;
+}
+
+.editor__inputs-title {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-size: 2rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  width: 50%;
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid #344047;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.editor__inputs-intro {
+  font-size: 1.8rem;
+  font-family: "Baloo Paaji 2", sans-serif;
+  outline: none;
+  margin-left: 1rem;
+  width: 50%;
+  height: 10rem;
+  padding: 1rem;
+  resize: none;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+.editor__inputs-submit {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-weight: 800;
+  padding: 0.5rem 1.5rem;
+  color: #f3f3f3;
+  background-color: #8ba0a9;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  transition: 0.2s;
+}
+
+.editor__inputs-submit:hover {
+  background-color: #374146;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.editor__inputs-submit :active {
+  background-color: #8ba0a9;
+  cursor: pointer;
+  transform: translateY(0.2rem) scale(1.2);
+}
+
+/* OPTIONS */
+select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial",
+    sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+@media (min-width: 768px) {
+  .select-box {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .select-box {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .select-box {
+    width: 30%;
+  }
+}
+.select-box__current {
+  position: relative;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  -webkit-animation-name: none;
+  animation-name: none;
+  width: 10%;
+}
+.select-box__current:focus + .select-box__list .select-box__option {
+  cursor: pointer;
+}
+.select-box__current:focus .select-box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.select-box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+}
+.select-box__value {
+  display: flex;
+}
+.select-box__input {
+  display: none;
+}
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+}
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: #fff;
+}
+.select-box__list {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  -webkit-animation-name: HideList;
+  animation-name: HideList;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: step-start;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+.select-box__option {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+}
+.select-box__option:hover,
+.select-box__option:focus {
+  color: #546c84;
+  background-color: #fbfbfb;
+}
+
+@-webkit-keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
